@@ -14,7 +14,7 @@ mongoose.connect(
 // db.once("open", () => console.log("connected to database"));
 
 var corsOptions = {
-  origin: "https://5ovxy.csb.app",
+  origin: "https://buggi-tracker-app.netlify.app",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
