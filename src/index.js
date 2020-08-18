@@ -4,7 +4,7 @@ var cors = require("cors");
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://ezzdin_atef:atef1125@cluster0.fyzf3.mongodb.net/buggi?retryWrites=true&w=majority",
+  "mongodb+srv://ezzdin_dev:dev123456@cluster0.fyzf3.mongodb.net/buggi?retryWrites=true&w=majority",
   { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
@@ -26,5 +26,8 @@ const prjectRouter = require("./routers/projects");
 
 app.use("/users", userRouter);
 app.use("/projects", prjectRouter);
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.listen(3000, () => console.log("Server Started"));
