@@ -4,7 +4,7 @@ var cors = require("cors");
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://ezzdin_dev:dev123456@cluster0.fyzf3.mongodb.net/buggi?retryWrites=true&w=majority",
+  "mongodb+srv://ezzdin_dev:180daraga@cluster0.fyzf3.mongodb.net/buggi?retryWrites=true&w=majority",
   { useUnifiedTopology: true, useNewUrlParser: true }
 );
 
@@ -13,12 +13,8 @@ mongoose.connect(
 // db.on("error", error => console.error(error));
 // db.once("open", () => console.log("connected to database"));
 
-var corsOptions = {
-  origin: "https://buggi-tracker-app.netlify.app",
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 const userRouter = require("./routers/users");
